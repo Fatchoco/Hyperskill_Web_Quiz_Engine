@@ -1,0 +1,1007 @@
+[1;31m
+Start test 1[0m
+
+)  .   ____          _            __ _ _
+* /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
++( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+, \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
++  '  |____| .__|_| |_|_| |_\__, | / / / /
+* =========|_|==============|___/=/_/_/_/
+, :: Spring Boot ::        (v2.2.2.RELEASE)
+
+ˇ2020-09-06 01:01:39.854  INFO 13992 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine on LAPTOP-1C1HBIIB with PID 13992 (started by Erico in C:\MyLocalFiles\IDE_Projects\Intellij\Web Quiz Engine\Web Quiz Engine\task)
+¶2020-09-06 01:01:39.862  INFO 13992 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+°2020-09-06 01:01:41.551  INFO 13992 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ª2020-09-06 01:01:41.691  INFO 13992 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126ms. Found 2 JPA repository interfaces.
+ä2020-09-06 01:01:42.355  INFO 13992 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+í2020-09-06 01:01:42.823  INFO 13992 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2020-09-06 01:01:42.843  INFO 13992 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ï2020-09-06 01:01:42.843  INFO 13992 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+ò2020-09-06 01:01:43.074  INFO 13992 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+•2020-09-06 01:01:43.082  INFO 13992 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3136 ms
+Ä2020-09-06 01:01:43.311  INFO 13992 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+Ö2020-09-06 01:01:43.675  INFO 13992 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+ª2020-09-06 01:01:43.687  INFO 13992 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+ü2020-09-06 01:01:44.219  INFO 13992 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ç2020-09-06 01:01:44.387  INFO 13992 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+û2020-09-06 01:01:44.731  INFO 13992 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+ü2020-09-06 01:01:44.999  INFO 13992 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+´Hibernate: create table quiz (id integer not null, answer binary(255), author varchar(255), options binary(255), text varchar(255), title varchar(255), primary key (id))
+õHibernate: create table quiz_completion (entryid integer not null, completed_at timestamp, id integer not null, user varchar(255), primary key (entryid))
+KHibernate: create sequence hibernate_sequence start with 1 increment by 1
+Ÿ2020-09-06 01:01:46.235  INFO 13992 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2020-09-06 01:01:46.247  INFO 13992 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ù2020-09-06 01:01:46.991  WARN 13992 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Õ2020-09-06 01:01:47.103  INFO 13992 --- [    Test worker] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+ú2020-09-06 01:01:47.347  INFO 13992 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+û2020-09-06 01:01:48.032  INFO 13992 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d954e33, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a25a1ce, org.springframework.security.web.header.HeaderWriterFilter@51742eef, org.springframework.security.web.authentication.logout.LogoutFilter@37d93783, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@492570a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@638e0cf3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f54cdca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35ac8e9e, org.springframework.security.web.session.SessionManagementFilter@25403743, org.springframework.security.web.access.ExceptionTranslationFilter@67b49f0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5286e26]
+õ2020-09-06 01:01:48.100  INFO 13992 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+°2020-09-06 01:01:48.196  INFO 13992 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+•2020-09-06 01:01:48.200  INFO 13992 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 9.036 seconds (JVM running for 10.413)
+ü2020-09-06 01:01:48.756  INFO 13992 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+é2020-09-06 01:01:48.760  INFO 13992 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+á2020-09-06 01:01:48.776  INFO 13992 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+[1;31m
+Start test 2[0m
+[1;31m
+Start test 3[0m
+∞2020-09-06 01:01:49.340  WARN 13992 --- [nio-8889-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String engine.QuizController.registerUser(engine.MyUser): [Field error in object 'myUser' on field 'email': rejected value [google.com]; codes [Email.myUser.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [myUser.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@4c51588a,.+@.+\..+]; default message [Email should be valid]] ]
+[1;31m
+Start test 4[0m
+¥2020-09-06 01:01:49.456  WARN 13992 --- [nio-8889-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String engine.QuizController.registerUser(engine.MyUser): [Field error in object 'myUser' on field 'email': rejected value [well@googlecom]; codes [Email.myUser.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [myUser.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@4c51588a,.+@.+\..+]; default message [Email should be valid]] ]
+[1;31m
+Start test 5[0m
+[1;31m
+Start test 6[0m
+ü2020-09-06 01:01:49.692  WARN 13992 --- [nio-8889-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String engine.QuizController.registerUser(engine.MyUser): [Field error in object 'myUser' on field 'password': rejected value [1234]; codes [Size.myUser.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [myUser.password,password]; arguments []; default message [password],2147483647,5]; default message [The password must have at least five characters]] ]
+[1;31m
+Start test 7[0m
+û2020-09-06 01:01:49.708  WARN 13992 --- [nio-8889-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String engine.QuizController.registerUser(engine.MyUser): [Field error in object 'myUser' on field 'password': rejected value [123]; codes [Size.myUser.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [myUser.password,password]; arguments []; default message [password],2147483647,5]; default message [The password must have at least five characters]] ]
+[1;31m
+Start test 8[0m
+À2020-09-06 01:01:50.072  WARN 13992 --- [nio-8889-exec-9] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [176] milliseconds.
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 9[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 10[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 11[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 12[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 13[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 14[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 15[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 16[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 17[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 18[0m
+[1;31m
+Start test 19[0m
+[1;31m
+Start test 20[0m
+[1;31m
+Start test 21[0m
+[1;31m
+Start test 22[0m
+[1;31m
+Start test 23[0m
+[1;31m
+Start test 24[0m
+[1;31m
+Start test 25[0m
+[1;31m
+Start test 26[0m
+[1;31m
+Start test 27[0m
+[1;31m
+Start test 28[0m
+[1;31m
+Start test 29[0m
+[1;31m
+Start test 30[0m
+[1;31m
+Start test 31[0m
+[1;31m
+Start test 32[0m
+[1;31m
+Start test 33[0m
+[1;31m
+Start test 34[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: [2]
+[1;31m
+Start test 35[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1]
+QuizAnswer: [2]
+[1;31m
+Start test 36[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2]
+QuizAnswer: [2]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 37[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [3]
+QuizAnswer: [2]
+[1;31m
+Start test 38[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: [1]
+[1;31m
+Start test 39[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1]
+QuizAnswer: [1]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 40[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2]
+QuizAnswer: [1]
+[1;31m
+Start test 41[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [3]
+QuizAnswer: [1]
+[1;31m
+Start test 42[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 43[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 44[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 45[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 46[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 47[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 48[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2]
+QuizAnswer: [2]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 49[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [3]
+QuizAnswer: [2]
+[1;31m
+Start test 50[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: [1]
+[1;31m
+Start test 51[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1]
+QuizAnswer: [1]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 52[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 53[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 54[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 55[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 56[0m
+≥2020-09-06 01:01:54.653  WARN 13992 --- [nio-8889-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+9 at [Source: (PushbackInputStream); line: 4, column: 4]]
+[1;31m
+Start test 57[0m
+≥2020-09-06 01:01:54.753  WARN 13992 --- [nio-8889-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+9 at [Source: (PushbackInputStream); line: 5, column: 4]]
+[1;31m
+Start test 58[0m
+≥2020-09-06 01:01:54.877  WARN 13992 --- [nio-8889-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+9 at [Source: (PushbackInputStream); line: 4, column: 4]]
+[1;31m
+Start test 59[0m
+≥2020-09-06 01:01:55.025  WARN 13992 --- [nio-8889-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+9 at [Source: (PushbackInputStream); line: 5, column: 4]]
+[1;31m
+Start test 60[0m
+å2020-09-06 01:01:55.149  WARN 13992 --- [io-8889-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public engine.Quiz engine.QuizController.postQuiz(engine.Quiz,java.security.Principal): [Field error in object 'quiz' on field 'options': rejected value [null]; codes [NotEmpty.quiz.options,NotEmpty.options,NotEmpty.[Ljava.lang.String;,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [quiz.options,options]; arguments []; default message [options]]; default message [Options is mandatorry]] ]
+[1;31m
+Start test 61[0m
+≥2020-09-06 01:01:55.233  WARN 13992 --- [nio-8889-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+9 at [Source: (PushbackInputStream); line: 5, column: 4]]
+[1;31m
+Start test 62[0m
+≥2020-09-06 01:01:55.329  WARN 13992 --- [nio-8889-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+9 at [Source: (PushbackInputStream); line: 5, column: 4]]
+[1;31m
+Start test 63[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 64[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 65[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 66[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: [0, 1]
+[1;31m
+Start test 67[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 68[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 69[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 70[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [3]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 71[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1]
+QuizAnswer: [0, 1]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 72[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 2]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 73[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 3]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 74[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 75[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 76[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2, 3]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 77[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 78[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 3]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 79[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2, 3]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 80[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2, 3]
+QuizAnswer: [0, 1]
+[1;31m
+Start test 81[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 82[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 83[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 84[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: [1, 3]
+[1;31m
+Start test 85[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 86[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 87[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 88[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [3]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 89[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 90[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 2]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 91[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 3]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 92[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 93[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: [1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 94[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2, 3]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 95[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 96[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 3]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 97[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2, 3]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 98[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2, 3]
+QuizAnswer: [1, 3]
+[1;31m
+Start test 99[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 100[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 101[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 102[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 103[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: []
+[1;31m
+Start test 104[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1]
+QuizAnswer: []
+[1;31m
+Start test 105[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2]
+QuizAnswer: []
+[1;31m
+Start test 106[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [3]
+QuizAnswer: []
+[1;31m
+Start test 107[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1]
+QuizAnswer: []
+[1;31m
+Start test 108[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 2]
+QuizAnswer: []
+[1;31m
+Start test 109[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 3]
+QuizAnswer: []
+[1;31m
+Start test 110[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2]
+QuizAnswer: []
+[1;31m
+Start test 111[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: []
+[1;31m
+Start test 112[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2, 3]
+QuizAnswer: []
+[1;31m
+Start test 113[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2]
+QuizAnswer: []
+[1;31m
+Start test 114[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 3]
+QuizAnswer: []
+[1;31m
+Start test 115[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2, 3]
+QuizAnswer: []
+[1;31m
+Start test 116[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2, 3]
+QuizAnswer: []
+[1;31m
+Start test 117[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 118[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 119[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 120[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 121[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: []
+[1;31m
+Start test 122[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1]
+QuizAnswer: []
+[1;31m
+Start test 123[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2]
+QuizAnswer: []
+[1;31m
+Start test 124[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [3]
+QuizAnswer: []
+[1;31m
+Start test 125[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1]
+QuizAnswer: []
+[1;31m
+Start test 126[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 2]
+QuizAnswer: []
+[1;31m
+Start test 127[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 3]
+QuizAnswer: []
+[1;31m
+Start test 128[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2]
+QuizAnswer: []
+[1;31m
+Start test 129[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: []
+[1;31m
+Start test 130[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2, 3]
+QuizAnswer: []
+[1;31m
+Start test 131[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2]
+QuizAnswer: []
+[1;31m
+Start test 132[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 3]
+QuizAnswer: []
+[1;31m
+Start test 133[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2, 3]
+QuizAnswer: []
+[1;31m
+Start test 134[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2, 3]
+QuizAnswer: []
+[1;31m
+Start test 135[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 136[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 137[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 138[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 139[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 140[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 141[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 142[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [3]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 143[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 144[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 2]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 145[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 3]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 146[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 147[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 148[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [2, 3]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 149[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 150[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 3]
+QuizAnswer: [0, 1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 151[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 2, 3]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 152[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2, 3]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 153[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 154[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 155[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 156[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0]
+QuizAnswer: []
+[1;31m
+Start test 157[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 2]
+QuizAnswer: [0, 1, 3]
+[1;31m
+Start test 158[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 3]
+QuizAnswer: [0, 1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 159[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 160[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 161[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 162[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 163[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 164[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 165[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 166[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 167[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 168[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 169[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+[1;31m
+Start test 170[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 171[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 172[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 173[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 174[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 175[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [0, 1, 3]
+QuizAnswer: [0, 1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 176[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: [1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 177[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: [1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 178[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: [1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 179[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: [1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 180[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: [1, 3]
+QuizAnswer: [1, 3]
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 181[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+PostAnswer: []
+QuizAnswer: []
+3Hibernate: call next value for hibernate_sequence
+^Hibernate: insert into quiz_completion (completed_at, id, user, entryid) values (?, ?, ?, ?)
+[1;31m
+Start test 182[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 183[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 184[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 185[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 186[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 187[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 188[0m
+ëHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ? offset ?
+[1;31m
+Start test 189[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 190[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 191[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 192[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 193[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 194[0m
+àHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ?
+wHibernate: select count(quizcomple0_.entryid) as col_0_0_ from quiz_completion quizcomple0_ where quizcomple0_.user=?
+[1;31m
+Start test 195[0m
+ëHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ? offset ?
+[1;31m
+Start test 196[0m
+ëHibernate: select quizcomple0_.entryid as entryid1_1_, quizcomple0_.completed_at as complete2_1_, quizcomple0_.id as id3_1_, quizcomple0_.user as user4_1_ from quiz_completion quizcomple0_ where quizcomple0_.user=? order by quizcomple0_.completed_at desc limit ? offset ?
+[1;31m
+Start test 197[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+(Hibernate: delete from quiz where id=?
+[1;31m
+Start test 198[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 199[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 200[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 201[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 202[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 203[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 204[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 205[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+(Hibernate: delete from quiz where id=?
+[1;31m
+Start test 206[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 207[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 208[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 209[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 210[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 211[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 212[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 213[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+[1;31m
+Start test 214[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 215[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 216[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 217[0m
+◊Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ where quiz0_.id=?
+[1;31m
+Start test 218[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 219[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 220[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 221[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 222[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 223[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 224[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 225[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 226[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 227[0m
+3Hibernate: call next value for hibernate_sequence
+bHibernate: insert into quiz (answer, author, options, text, title, id) values (?, ?, ?, ?, ?, ?)
+[1;31m
+Start test 228[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+AHibernate: select count(quiz0_.id) as col_0_0_ from quiz quiz0_
+[1;31m
+Start test 229[0m
+ÕHibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ?
+AHibernate: select count(quiz0_.id) as col_0_0_ from quiz quiz0_
+[1;31m
+Start test 230[0m
+÷Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ? offset ?
+[1;31m
+Start test 231[0m
+÷Hibernate: select quiz0_.id as id1_0_, quiz0_.answer as answer2_0_, quiz0_.author as author3_0_, quiz0_.options as options4_0_, quiz0_.text as text5_0_, quiz0_.title as title6_0_ from quiz quiz0_ limit ? offset ?
